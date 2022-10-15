@@ -1,0 +1,13 @@
+[bot]
+token = ""
+prefix = ""
+
+[nationstates]
+agent = ""
+key = ""
+
+[postgres]
+host = ""
+user = ""
+pass =  ""
+database = ""
