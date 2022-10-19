@@ -20,4 +20,4 @@ async def main():
 try:
     asyncio.run(main())
 except KeyboardInterrupt:
-    print("Interrupt")
+    pass

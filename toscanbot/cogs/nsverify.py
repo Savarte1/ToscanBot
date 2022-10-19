@@ -1,4 +1,4 @@
-from discord.ext import commands
+from discord.ext import commands, tasks
 import discord
 from .. import robot
 
@@ -15,7 +15,7 @@ class NSVerify(commands.Cog):
         pass
 
     @commands.command()
-    async def drop(self, ctx: commands.Context, *, nation: str = None):
+    async def drop(self, ctx: commands.Context, *, nation: str):
         pass
 
 

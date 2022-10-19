@@ -13,6 +13,19 @@ class GuildSettings(Model):
     mod_log = fields.BigIntField()
 
 
+class GuildWelcome(Model):
+    id = fields.IntField(pk=True)
+    guild_id = fields.BigIntField(unique=True)
+    welcome = fields.TextField()
+    departure = fields.TextField()
+
+class MemberSettings(Model):
+    id = fields.IntField(pk=True)
+    guild = fields.BigIntField()
+    user = fields.BigIntField()
+    nsvexempt = fields.BooleanField()
+
+
 class NSVGuildSettings(Model):
     id = fields.IntField(pk=True)
     guild_id = fields.BigIntField()
@@ -58,7 +71,7 @@ class PollPinPolls(Model):
     role = fields.BigIntField()
 
     class Meta:
-        unique_together = (("guild_id", "poll"), )
+        unique_together = (("guild_id", "poll"),)
 
 
 class PollPinPins(Model):
